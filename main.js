@@ -15,7 +15,7 @@ let addMovie = function () {
             "rating must be numeric " +
             "and 1 thru 5");
     } else {
-        movies.push(movie);  // storing each trip object created in the array, used as a "stack"
+        movies.push(movie);  
         displayMovies();
     }
     document.getElementById("movie-name").focus();
@@ -25,22 +25,16 @@ let addMovie = function () {
 
 let movies = [];
 
-// define the function used to calc and update screen output
 let displayMovies = function () {
 
     let displayString = ""
 
     for (let i in movies) {
         
-        // JS for loop auto's from 0 to length of collection
-        //displayString = "test"
         displayString += movies[i].GetAll() + "\n"
-        //displayString += movies[i].rating + "\n";
-    // use added method of object defintion
     }
     
-    document.getElementById("movie-list").value =  displayString // displayString; // update the data
-    //document.getElementById("movie-name").select();           
+    document.getElementById("movie-list").value =  displayString 
 };
 
 
